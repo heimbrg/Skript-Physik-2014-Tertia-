@@ -1,0 +1,146 @@
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[justified,openany,nofonts]{tufte-book}
+\usepackage{mooculus}
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+%\usepackage{showkeys} %% Useful for debugging
+\usepackage{siunitx}
+\setcounter{secnumdepth}{2}
+\renewcommand{\figurename}{Abbildung}
+\usepackage{booktabs,tabularx,multirow,longtable}
+
+
+% Prints the month name (e.g., January) and the year (e.g., 2008)
+\newcommand{\monthyear}{%
+  \ifcase\month\or January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or
+  December\fi\space\number\year
+}
+
+% Generates the index
+\usepackage{makeidx}
+\makeindex
+
+\newcommand{\xrefn}[1]{\ref{#1}}
+\renewcommand{\tablename}{Tabelle}
+
+
+\newenvironment{lemma}{\subsection*{Lemma}}{}
+\newenvironment{remark}[1]{\subsection*{Remark: #1}}{}
+
+
+%\def\exam{\null}
+\def\pagerdef{\null}
+
+\def\dfont{\bf}
+\def\em{\it}           % for emphasis
+
+\newcommand{\ds}{\displaystyle}
+
+\let\ssk\smallskip \let\msk\medskip \let\bsk\bigskip
+
+\usepackage{multicol}
+\def\twocol{\begin{multicols}{2}}
+\def\endtwocol{\end{multicols}}
+
+\title{Physik Tertia}
+%\author{Jim Fowler and Bart Snapp}
+\publisher{Einführung}
+%\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+%% % Prints an epigraph and speaker in sans serif, all-caps type.
+%% \newcommand{\openepigraph}[2]{%
+%%   %\sffamily\fontsize{14}{16}\selectfont
+%%   \begin{fullwidth}
+%%   \sffamily\large
+%%   \begin{doublespace}
+%%   \noindent\allcaps{#1}\\% epigraph
+%%   \noindent\allcaps{#2}% author
+%%   \end{doublespace}
+%%   \end{fullwidth}
+%% }
+
+
+
+
+\begin{document}
+\maketitle
+
+% v.4 copyright page
+
+
+\begin{fullwidth}
+~\vfill
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+Matthias Heimberg
+
+Gymnasium Oberaargau \url{gymo.ch}
+
+
+
+\end{fullwidth}
+
+
+\tableofcontents
+
+
+%% \renewcommand{\listtheoremname}{List of Main Theorems}
+%% \setcounter{tocdepth}{1}
+%% \listoftheorems[numwidth=4em,ignoreall,show={mainTheorem}]
+
+
+
+\chapter*{Die wichtigsten Sätze}% uses ntheorem
+\theoremlisttype{opt}
+\listtheorems{mainTheorem}
+
+
+
+\chapter*{Wie Sie ein Physikskript lesen}
+
+Ein Physikskript können Sie \textbf{nicht} wie einen Roman lesen! Um ``Physik zu lesen'' benötigen Sie:
+\begin{enumerate}
+\item Einen Stift.
+\item Viel leeres Papier.
+\item Den Willen, Dinge niederzuschreiben.
+\end{enumerate}
+Wenn Sie Physik lesen, sollten Sie gleichzeitig diese Dinge ver\textbf{arbeiten}. Das bedeutet: \textbf{Stellen} Sie sich die Sachverhalte \textbf{vor}, \textbf{denken} Sie darüber nach was Sie machen, fertigen Sie \textbf{Skizzen} an und gehen Sie \textbf{systematisch} vor. Arbeiten Sie die Beispiele selbst durch und ergänzen Sie die Details. Dies ist keine simple Aufgabe, es ist \textbf{harte} Arbeit! Sie machen hier keine passive Reise, es passiert nicht von selbst, Sie müssen selbst die Physik machen! 
+
+
+
+\setcounter{chapter}{-1}
+
+%%
+% Start the main matter (normal chapters)
+%\mainmatter
+%\tikzexternaldisable
+\part{Einführung}
+\input Kapitel_1
+\input Kapitel_2
+
+
+%QUELLEN:
+%http://www.physique.lu/lte_physique/classe_10PS-TG/physik_grundlagen.pdf
+%https://docs.google.com/file/d/0B4nWIuz6_aEMS0ZmbVI4WHdTLXFFMURob0V1M21Odw/edit
+
+%\bibliography{sample-handout}
+%\bibliographystyle{plainnat}
+
+%\finalizeanswers
+%\chapter*{Answers to Exercises}
+%\small
+%\addcontentsline{toc}{chapter}{Answers to Exercises}
+%\IfFileExists{answers.tex}{\input{answers}}
+%\normalsize
+%\backmatter
+%\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+
+\end{document}
+
+
+
+%sagemathcloud={"zoom_width":95}
