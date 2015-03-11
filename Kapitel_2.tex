@@ -289,3 +289,235 @@ Wir skizzieren dazu ein $t-v$-Diagramm (unten) und lösen grafisch:
   \end{axis}
 \end{tikzpicture}
 \end{figure}
+\section{Eindimensionale Würfe}
+Wir betrachten in diesem Kapitel zunächst den freien Fall, als einfachste ``Wurfbewegung'', als Fallenlassen eines Körpers. Danach gehen wir über zum Vertikalen Wurf (nach oben, dann nach unten). Im nächsten Kapitel werden wir dann die zweidimensionalen Bewegungen betrachten und in diesem Zusammenhang den horizontalen Wurf antreffen.
+\begin{marginfigure}
+    \includegraphics[width=0.7\textwidth]{Bilder/galileo.jpg}
+    \label{fig:geoidfig}
+    \caption{Galileo Galilei (1564 - 1641) erkannte 1590 die Gesetze des freien Falls: Alle Körper fallen im Vakuum unabhängig von ihrer Gestalt, Zusammensetzung und Masse gleich schnell.}
+\end{marginfigure}
+\subsection{Der freie Fall}
+Lässt man ein Objekt fallen, so wird dieses eine beschleunigte Bewegung vollführen. Solange der Luftwiderstand nicht vorhanden oder sehr klein ist, sprechen wir dabei von einem \textit{freien Fall}. Zum freien Fall machen wir die folgenden Beobachtungen:
+\begin{itemize}
+\item Lassen wir einen Gegenstand aus der Hand frei fallen, so beschleunigt er aus der Ruhe. Wir beobachten eine gleichförmig beschleunigte Bewegung
+\item Die Masse spielt für den Wert der Beschleunigung keine Rolle, alle Körper fallen gleich.
+\end{itemize}
+
+Die von der Gewichtskraft bewirkte Beschleunigung $a$  hat überall auf der Erdoberfläche in etwa den gleichen Betrag von \SI{9.81}{\metre \per \second \squared}. In Würdigung der Verdienste von Galileo Galilei um diese Erkenntnis wird diese besondere Beschleunigung mit $g$ bezeichnet.
+
+\paragraph{Bewegungsgesetze des freien Falls}
+Für den Freien Fall eines Körpers, d.h. die Bewegung des Körpers unter alleinigem Einfluss der Erdanziehungskraft (und ohne Anfangsgeschwindigkeit) gelten die folgenden Bewegungsgesetze:
+\begin{fullwidth}
+\begin{eqnarray*}
+    & \text{Ortsachse nach oben orientiert} & \text{Ortsachse nach unten orientiert} \\
+    \text{Zeit-Orts-Gesetz} & y(t) = y_{0} - \frac{1}{2} \cdot g \cdot t^{2} & y(t) =\frac{1}{2} \cdot g \cdot t^{2} \\
+    \text{Zeit-Geschwindigkeits-Gesetz} & v_{y}(t) = -g \cdot t & v_{y}(t) = g \cdot t \\
+    \text{Zeit-Beschleunigungs-Gesetz} & a_{y}(t) = -g & a_{y}(t)=g 
+\end{eqnarray*}
+\end{fullwidth}
+\begin{example}
+Zeigen Sie für die Beschreibung des Freien Falls mit einer nach oben orientierten Ortsachse, dass sich die Fallzeit (das ist die Zeitspanne vom Loslassen des Körpers bis zu dessen Auftreffen auf dem Boden) $t_{F} = \sqrt{\frac{2 y_{0}}{g}}$ ergibt.
+\end{example}
+
+\begin{solution}
+Die Fallzeit $t_{F}$ erhält man durch die Bedingung, dass beim Auftreffen auf den Boden gilt $y(t_{F})=0$. Somit ergibt sich aus dem Zeit-Orts-Gesetz
+\[ 0 = y_{0} - \frac{1}{2} \cdot g \cdot t_{F}^{2} \Leftrightarrow t_{F}^{2} = \frac{2 \cdot y_{0}}{g} \Rightarrow t_{F} = \sqrt{\frac{2 y_{0}}{g}}\]
+\end{solution}
+
+Aus der Kombination von Zeit-Orts-Gesetz und Zeit-Geschwindigkeits-Gesetz kann man durch Elimination der Zeit eine Beziehung zwischen der Geschwindigkeit und dem Ort, ein sogenanntes Orts-Geschwindigkeits-Gesetz erhalten:
+\begin{example}
+Zeigen Sie, dass sich bei der Beschreibung des Freien Falls mit einer nach oben orientierten Ortsachse das Orts-Geschwindigkeits-Gesetz
+\[ v_{y}^{2} = 2 \cdot g \cdot (y_{0} - y) \]
+ergibt.
+\end{example}
+
+\begin{solution}
+Aus
+\[  \left.\begin{array}{r}y=y_{0}-\frac{1}{2} \cdot g \cdot t^{2}\\ v_{y} = -g \cdot t \Leftrightarrow t = - \frac{v_{y}}{g}\end{array} \right\} \Rightarrow y=y_{0} - \frac{1}{2} \cdot g \cdot \left( - \frac{v_{y}}{g} \right)^{2} \]
+ergibt sich durch Ausquadrieren und Zusammenfassen der rechten Seite der Gleichung
+\[ y=y_{0} -\frac{1}{2} \cdot g \cdot \frac{v_{y}^{2}}{g^{2}} \Leftrightarrow y = y_{0} - \frac{v_{y}^{2}}{2 \cdot g} \]
+und nach Umstellen der Gleichung schliesslich
+\[ \frac{v_{y}^{2}}{2 \cdot g} = y_{0} - y \Leftrightarrow v_{y}^{2} = 2 \cdot g \cdot (y_{0} - y) \]
+\end{solution}
+
+\begin{example}
+Zeigen Sie, dass sich bei der Beschreibung des Freien Falls mit einer nach unten orientierten Ortsachse das Orts-Geschwindigkeits-Gesetz
+\[ v_{y}^{2} = 2 \cdot g \cdot y \]
+ergibt.
+\end{example}
+
+\begin{solution}
+Aus
+\[  \left.\begin{array}{r}y=\frac{1}{2} \cdot g \cdot t^{2}\\ v_{y} = g \cdot t \Leftrightarrow t =  \frac{v_{y}}{g}\end{array} \right\} \Rightarrow y=\frac{1}{2} \cdot g \cdot \left( \frac{v_{y}}{g} \right)^{2} \]
+ergibt sich durch Ausquadrieren und Zusammenfassen der rechten Seite der Gleichung
+
+\[ y=\frac{1}{2} \cdot g \cdot \frac{v_{y}^{2}}{g^{2}} \Leftrightarrow y = \frac{v_{y}^{2}}{2 \cdot g} \]
+und nach Umstellen der Gleichung schliesslich
+\[ \frac{v_{y}^{2}}{2 \cdot g} = y \Leftrightarrow v_{y}^{2} = 2 \cdot g \cdot  y \]
+\end{solution}
+
+\subsection{Der Wurf nach unten}
+Gelegentlich kommt es vor, dass ein Körper mit einer nach unten gerichteten Anfangsgeschwindigkeit $v_{y0}$ lotrecht nach unten geworfen wird. Diese Bewegung nennt man in der Physik einen \textit{Wurf nach unten}.
+
+\paragraph{Bewegungsgesetze des freien Falls}
+Für den \textit{Wurf nach unten}, d.h. die Bewegung des Körpers unter alleinigem Einfluss der Erdanziehungskraft mit einer nach unten gerichteten Anfangsgeschwindigkeit gelten die folgenden Bewegungsgesetze:
+\begin{fullwidth}
+\begin{eqnarray*}
+    & \text{Ortsachse nach oben orientiert} & \text{Ortsachse nach unten orientiert} \\
+    \text{Zeit-Orts-Gesetz} & y(t) = y_{0} - v_{y0} \cdot t - \frac{1}{2} \cdot g \cdot t^{2} & y(t) =v_{y0} \cdot t + \frac{1}{2} \cdot g \cdot t^{2} \\
+    \text{Zeit-Geschwindigkeits-Gesetz} & v_{y}(t) = -v_{y0} -g \cdot t & v_{y}(t) = v_{y0} + g \cdot t \\
+    \text{Zeit-Beschleunigungs-Gesetz} & a_{y}(t) = -g & a_{y}(t)=g 
+\end{eqnarray*}
+\end{fullwidth}
+
+\begin{example}
+Zeigen Sie für die Beschreibung des Wurfs nach unten mit einer nach oben orientierten Ortsachse, dass sich die Fallzeit (das ist die Zeitspanne vom Loswerfen des Körpers bis zu dessen Auftreffen auf dem Boden)
+\[ t_{F} = \frac{-v_{y0} + \sqrt{v_{y0}^{2} + 2 g y_{0}}}{g} \]
+ergibt.
+\end{example}
+
+\begin{solution}
+Die Fallzeit $t_{F}$ erhält man durch die Bedingung, dass beim Auftreffen auf den Boden gilt $y(t_{F})=0$. Somit ergibt sich aus dem Zeit-Orts-Gesetz:
+\[ y(t_{F}) = y_{0} - v_{y0} \cdot t_{F} - \frac{1}{2} \cdot g \cdot t_{F}^{2} \]
+Diese Quadratische Gleichung für die Variable $t_{F}$ hat die beiden Lösungen:
+\[ t_{F;1,2} = \frac{-v_{y0} \pm \sqrt{v_{y0}^{2} + 2 \cdot g \cdot y_{0}}}{g} \]
+von denen nur die Lösung
+\[ t_{F} = \frac{-v_{y0} + \sqrt{v_{y0}^{2} + 2 \cdot g \cdot y_{0}}}{g} \]
+mit dem positiven Vorzeichen vor der Wurzel in Betracht kommt, da die andere Lösung stets negativ ist.
+\end{solution}
+
+\begin{example}
+Zeigen Sie, dass sich bei der Beschreibung des Wurfs nach unten mit einer nach oben orientierten Ortsachse das Orts-Geschwindigkeits-Gesetz
+\[ v_{y}^{2} - v_{y0}^{2} = 2 \cdot g \cdot (y_{0} - y) \]
+ergibt.
+\end{example}
+
+\begin{solution}
+Aus
+\[ \left.\begin{array}{r} y=y_{0} - v_{y0} \cdot t - \frac{1}{2} \cdot  g \cdot t^{2} \\ v_{y} = - v_{y0} -g \cdot t \Leftrightarrow t = - \frac{v_{y} + v_{y0}}{g} \end{array} \right\} \Rightarrow y= y_{0} - v_{y0} \cdot \left( - \frac{v_{y} + v_{y0}}{g} \right) - \frac{1}{2} \cdot g \cdot \left( - \frac{v_{y} + v_{y0}}{g} \right)^{2} \]
+ergibt sich durch Ausquadrieren und Zusammenfassen der rechten Seite der Gleichung
+\[ y=y_{0} - \frac{v_{y}^{2} - v_{y0}^{2}}{2 \cdot g} \]
+und nach Umstellen der Gleichung schliesslich
+\[ v_{y}^{2} - v_{y0}^{2} = 2 \cdot g \cdot (y_{0} - y) \]
+\end{solution}
+
+\begin{example}
+Zeigen Sie, dass sich bei der Beschreibung des Wurfs nach unten mit einer nach unten orientierten Ortsachse das Orts-Geschwindigkeits-Gesetz
+\[ v_{y}^{2} - v_{y0}^{2} = 2 \cdot g \cdot  y \]
+ergibt.
+\end{example}
+
+\begin{solution}
+Aus
+\[ \left.\begin{array}{r} y=v_{y0} \cdot t + \frac{1}{2} \cdot  g \cdot t^{2} \\ v_{y} = v_{y0} +g \cdot t \Leftrightarrow t =  \frac{v_{y} + v_{y0}}{g} \end{array} \right\} \Rightarrow y= v_{y0} \cdot \left( \frac{v_{y} + v_{y0}}{g} \right) + \frac{1}{2} \cdot g \cdot \left( \frac{v_{y} + v_{y0}}{g} \right)^{2} \]
+ergibt sich durch Ausquadrieren und Zusammenfassen der rechten Seite der Gleichung
+\[ y=\frac{v_{y}^{2} - v_{y0}^{2}}{2 \cdot g} \]
+und nach Umstellen der Gleichung schliesslich
+\[ v_{y}^{2} - v_{y0}^{2} = 2 \cdot g \cdot  y \]
+\end{solution}
+
+\subsection{Der Wurf nach oben}
+Häufiger als der \textit{Wurf nach unten} kommt es vor, dass ein Körper mit einer nach oben gerichteten Anfangsgeschwindigkeit $v_{y0}$ lotrecht nach oben geworfen wird. Diese Bewegung nennt man in der Physik einen \textit{Wurf nach oben}.
+
+\paragraph{Bewegungsgesetze des Wurfs nach oben}
+Für den \textit{Wurf nach oben}, d.h. die Bewegung des Körpers unter alleinigem Einfluss der Erdanziehungskraft mit einer nach oben gerichteten Anfangsgeschwindigkeit gelten die folgenden Bewegungsgesetze:
+%\begin{fullwidth}
+\begin{eqnarray*}
+    & \text{Ortsachse nach oben orientiert}  \\
+    \text{Zeit-Orts-Gesetz} & y(t) = y_{0} - v_{y0} \cdot t - \frac{1}{2} \cdot g \cdot t^{2} \\
+    \text{Zeit-Geschwindigkeits-Gesetz} & v_{y}(t) = v_{y0} -g \cdot t  \\
+    \text{Zeit-Beschleunigungs-Gesetz} & a_{y}(t) = -g 
+\end{eqnarray*}
+%\end{fullwidth}
+
+\begin{example}
+Zeigen Sie, dass sich beim Wurf nach oben die Steigzeit $t_{S} = \frac{v_{y0}}{g}$ ergibt.
+\end{example}
+
+\begin{solution}
+Die Steigzeit $t_{S}$ erhält man durch die Bedingung, dass im höchsten Punkt gilt $v(t_{S})=0$. Somit ergibt sich aus dem Zeit-Geschwindigkeits-Gesetz:
+\[ 0= v_{y0} - g \cdot t_{S} \Leftrightarrow t_{S} =  \frac{v_{y0}}{g} \]
+\end{solution}
+
+\begin{example}
+Zeigen Sie, dass sich beim Wurf nach oben die Steighöhe $y_{S} = \frac{v_{y0}^{2}}{2 \cdot g}$ ergibt.
+\end{example}
+
+\begin{solution}
+Die Steighöhe $y_{S}$ erhält man, indem man in das Zeit-Orts-Gesetz die Steigzeit $t_{S} = \frac{v_{0}}{g}$ einsetzt:
+\[ y_{S} = v_{y0} \cdot \left( \frac{v_{y0}}{g} \right) - \frac{1}{2} \cdot g \left( \frac{v_{y0}}{g} \right)^{2} = \frac{v_{y0}^{2}}{g} - \frac{1}{2} \cdot \frac{v_{y0}^{2}}{g} = \frac{v_{y0}^{2}}{2 \cdot g} \]
+\end{solution}
+
+\begin{example}
+Aus der Kombination von Zeit-Orts-Gesetz und Zeit-Geschwindigkeits-Gesetz kann man durch Elimination der Zeit eine Beziehung zwischen der Geschwindigkeit und dem Ort, ein sogenanntes Orts-Geschwindigkeits-Gesetz erhalten.
+
+Zeigen Sie, dass sich bei der Beschreibung des Wurfs nach oben mit einer nach oben orientierten Ortsachse das Orts-Geschwindigkeits-Gesetz
+\[ v_{y}^{2} - v_{y0}^{2} = -2 \cdot g \cdot y \]
+ergibt.
+\end{example}
+
+\begin{solution}
+Aus
+\[ \left.\begin{array}{r}y=y_{y0} \cdot t - \frac{1}{2} \cdot g \cdot t^{2} \\ v_{y} = v_{y0} - g\cdot t \Leftrightarrow t = \frac{v_{y0} - v_{y}}{g} \end{array}  \right\} \Rightarrow y = v_{y0} \cdot \left( \frac{v_{y0} - v_{y}}{g} \right) - \frac{1}{2} \cdot g \cdot \left( \frac{v_{y0} - v_{y}}{g} \right)^{2} \]
+und nach Umstellen der Gleichung schliesslich
+\[ v_{y}^{2} - v_{y0}^{2} = -2 \cdot g \cdot y \]
+
+\end{solution}
+
+
+\newpage
+
+
+\section{Zweidimensionale Bewegungen}
+\begin{marginfigure} \center
+    \begin{tikzpicture}
+        \node (flugzeug) at (0,0) {\includegraphics[scale=0.4]{Bilder/flugzeug.png}};
+        \draw[-latex,thick] (0,0) -- (0,5) node[right]{$v_{Flugzeug}$};
+        \draw[-latex,thick] (0,0) -- (2,0) node[below]{$v_{Wind}$};
+        \draw[-latex,thick,dashed] (0,0) -- (2,5) node[right]{$v$};
+        
+    \end{tikzpicture}
+    \caption{Ein Flugzeug fliegt mit einer Geschwindigkeit von \SI{500}{\kilo \metre \per \hour} nach Norden und wird gleichzeitig durch einen Wind mit einer Geschwindigkeit von \SI{200}{\kilo \metre \per \hour} in Richtung Osten bewegt.}
+    \label{fig:flugzeug}
+\end{marginfigure}
+Wir haben bisher Bewegungen in einer Dimension betrachtet, das heisst, Bewegungen von Objekten in eine Richtung (vorwärts / rückwärts oder hinauf / hinunter). In unserem Alltag laufen jedoch die Bewegungen nicht alle auf einer Linie ab, unser Raum ist dreidimensional. Deshalb müssen wir eine Möglichkeit finden, um Bewegungen in mehreren Dimensionen (zunächst einmal in 2) zu beschreiben.
+\begin{example}
+Nehmen Sie an, dass ein Flugzeug mit einer Geschwindigkeit von $\SI{500}{\kilo \metre \per \hour}$ Richtung Norden fliegt. Gleichzeitig weht ein starker Wind aus westlicher Richtung mit einer Geschwindigkeit von $\SI{200}{\kilo \metre \per \hour}$ (vgl. Abbildung~\ref{fig:flugzeug}). Welche Bewegung macht das Flugzeug relativ zur Erde?
+
+\end{example}
+
+\begin{solution}
+Das Flugzeug macht nun eigentlich zwei Bewegungen gleichzeitig; einmal die Bewegung mit konstanter Geschwindigkeit nach Norden und einmal die Bewegung mit konstanter Geschwindigkeit nach Osten (durch den Wind). Die tatsächliche Bewegung ist nun eine \textit{Überlagerung} der beiden Bewegungen. Betrachten Sie die Abbildung~\ref{fig:flugzeug}, so sehen Sie die Bewegung relativ zum Boden als gestrichelten Pfeil. Entsprechen die Längen der Pfeile (Vektoren) den Beträgen der Geschwindigkeiten, so lässt sich die gesuchte Geschwindigkeit (Länge des gestrichelten Pfeiles) mit Hilfe des Satzes von Pythagoras bestimmen (rechtwinkliges Dreieck mit den Katheten $v_{Flugzeug}$ und $v_{Wind}$ und der Hypothenuse $v$). Es gilt also:
+\[ v = \sqrt{v_{Flugzeug}^{2} + v_{Wind}^{2}} = \sqrt{(\SI{500}{\kilo \metre \per \hour})^2 + (\SI{200}{\kilo \metre \per \hour})^2} = \SI{539}{\kilo \metre \per \hour}\]
+\end{solution}
+
+\begin{marginfigure} \center
+    \begin{tikzpicture}[scale=0.75]
+        \node (fisch) at (0,0) {\includegraphics[scale=0.3]{Bilder/fisch.png}};
+        \draw[-latex,thick] (0,0) -- (3,0) node[right]{$v_{Fisch}$};
+        \draw[-latex,thick] (0,0) -- (-30:4.5) node[below]{$v_{Bach}$};
+        \path (3,0) ++(-30:4.5) node (P);
+        \draw[-latex,thick,dashed] (0,0) -- (P) node[right]{$v$};
+        
+    \end{tikzpicture}
+    \caption{Ein Fisch schwimmt in einem Winkel von \SI{30}{\degree} zur Fliessrichtung eines Bachs}
+    \label{fig:fisch}
+\end{marginfigure}
+
+\begin{example}
+%Beispiel für eine Bewegung mit Winkel =/= 90°
+Ein Fisch schwimmt in einem Bach. Der Fisch schwimmt dabei mit einer Geschwindigkeit von \SI{1.5}{\metre \per \second} in einem Winkel von \SI{30}{\degree} zur Fliessrichtung des Bachs, während der Bach mit einer Geschwindigkeit von \SI{1.0}{\metre \per \second} fliesst (vgl. Abbildung~\ref{fig:fisch}). Welche Strecke legt der Fisch in \SI{5}{\second} zurück?
+\end{example}
+
+\begin{solution}
+Auch der Fisch macht hier zwei Bewegungen gleichzeitig. Die Richtungen dieser beiden Bewegungen stehen jedoch nun nicht mehr in einem rechten Winkel zueinander, wir können daher den Satz von Pythagoras nicht verwenden! Die eigentliche Bewegungsrichtung finden wir durch die sogenannte \textit{Vektoraddition} der beiden Geschwindigkeitsvektoren heraus. Dabei hängen wir die beiden Vektoren aneinander an, ohne deren Rrichtungen zu verändern. 
+\end{solution}
+
+\subsection{Vektoraddition}
+Wir benötigen offensichtlich eine Methode, um Vektoren addieren zu können, die sogenannte \textit{Vektoraddition}. Wir unterscheiden zwischen der grafischen und der rechnerischen Vektoraddition. Betrachten wir zunächst die grafische Addition:
+\begin{tikzpicture}
+    \draw[-latex, thick, red] (0,0) --node[above]{$\vv{a}$} (5,3);
+    \draw[-latex, thick, blue] (0,0) --node[left]{$\vv{b}$} (-1,4);
+\end{tikzpicture}
+
+
